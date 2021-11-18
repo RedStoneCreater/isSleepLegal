@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 846021683756413950}
   - component: {fileID: 846021683756413944}
   - component: {fileID: 846021683756413945}
-  - component: {fileID: 846021683756413946}
   - component: {fileID: 846021683756413947}
   - component: {fileID: 846021683756413941}
+  - component: {fileID: 188754733902490421}
   m_Layer: 0
   m_Name: RedPortalShoot
   m_TagString: Respawn
@@ -102,27 +102,6 @@ MonoBehaviour:
   RedPortalHorizontal: {fileID: 8509811868823156893, guid: 667177b21271f5d43a9dc380ec513389,
     type: 3}
   m_Speed: 5
---- !u!50 &846021683756413946
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846021683756413951}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &846021683756413947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21, y: 0.21}
+  m_Size: {x: 0.0831297, y: 0.08881046}
   m_EdgeRadius: 0
 --- !u!114 &846021683756413941
 MonoBehaviour:
@@ -162,3 +141,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!50 &188754733902490421
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846021683756413951}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

@@ -26,7 +26,7 @@ public class ReturnRedMovement : MonoBehaviour
             MoveTowardsTarget();
             RotateTowardsTarget();
         }
-        if (Vector3.Distance(transform.position, target.position) < 1f)
+        if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             GetComponent<BoxCollider2D>().enabled = true;
         }
