@@ -14,7 +14,8 @@ public class LeftWeapon : MonoBehaviour
     {
         if(GameObject.FindWithTag("Player").transform.localScale.x < 0)
         {
-            Speed = -Speed;
+            
+            transform.rotation = new Quaternion(0,0,180,0);
         }
     }
 
@@ -24,6 +25,7 @@ public class LeftWeapon : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         target = Player.transform;
         Distance += 1;
+
 
         if (Distance <= 200)
         {
@@ -47,7 +49,7 @@ public class LeftWeapon : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        var offset = 90f;
+        var offset = 0f;
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

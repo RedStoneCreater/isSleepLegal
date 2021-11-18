@@ -34,12 +34,13 @@ public class ReturnRedMovement : MonoBehaviour
 
     private void MoveTowardsTarget()
     {
+        
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 
     private void RotateTowardsTarget()
     {
-        var offset = 90f;
+        var offset = 0f;
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
