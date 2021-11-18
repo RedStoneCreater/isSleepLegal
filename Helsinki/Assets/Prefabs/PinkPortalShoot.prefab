@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1262777980084752030}
   m_Layer: 0
   m_Name: PinkPortalShoot
-  m_TagString: ReturnPink
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1262777980084751972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63b96d7d77a1679459d42ad8f249fefa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a457d1bdca0c589438941d181ee16cad, type: 3}
   m_Color: {r: 0.9607844, g: 0.4039216, b: 0.854902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c5381c78851ba4b89799bf5544401c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PinkPortal: {fileID: 1981891278104362694, guid: 188f4046052c680418a0a5d8ccdb1d81,
+  PinkPortal: {fileID: 1981891278104362694, guid: 3582b89c30397ba468add10f29ca5c76,
     type: 3}
-  PinkPortalHorizontal: {fileID: 8334164612866191684, guid: e3b68618c4c2b3a42b4e379b30978974,
+  PinkPortalHorizontal: {fileID: 8334164612866191684, guid: a4427573d426c7248ba0a6dd2d809618,
     type: 3}
   m_Speed: 5
 --- !u!61 &1262777980084752025
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262777980084751972}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1

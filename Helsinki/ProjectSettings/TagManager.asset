@@ -5,16 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - AccessCoin
+  - Throwable
+  - HealthOrb
   - Wall
-  - ReturnPink
-  - Shoot
-  - ReturnRed
+  - FireRight
   - Red
   - Pink
   - FireLeft
-  - FireRight
+  - ReturnPink
+  - ReturnRed
+  - Shoot
   - ReturnLeft
   - ReturnRight
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,9 +29,9 @@ TagManager:
   - 
   - 
   - Interactive
-  - 
-  - 
-  - 
+  - Player
+  - Pickup
+  - Ground
   - 
   - 
   - 

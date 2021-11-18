@@ -17,14 +17,14 @@ public class RedPortalMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_mousePosRed = Input.mousePosition;
+        m_PortalRedPos = Camera.main.WorldToScreenPoint(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_mousePosRed = Input.mousePosition;
-        m_PortalRedPos = Camera.main.WorldToScreenPoint(transform.position);
+        
 
         m_PortalRedRotation.x = m_mousePosRed.x - m_PortalRedPos.x;
         m_PortalRedRotation.y = m_mousePosRed.y - m_PortalRedPos.y;

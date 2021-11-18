@@ -17,14 +17,14 @@ public class PinkPortalMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_mousePosPink = Input.mousePosition;
+        m_PortalPinkPos = Camera.main.WorldToScreenPoint(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_mousePosPink = Input.mousePosition;
-        m_PortalPinkPos = Camera.main.WorldToScreenPoint(transform.position);
+        
 
         m_PortalPinkRotation.x = m_mousePosPink.x - m_PortalPinkPos.x;
         m_PortalPinkRotation.y = m_mousePosPink.y - m_PortalPinkPos.y;

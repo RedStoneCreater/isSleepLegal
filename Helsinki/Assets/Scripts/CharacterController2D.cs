@@ -18,6 +18,8 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Transform m_CeilingChecking;
     [SerializeField] private Collider2D m_CrouchDisableCollider;
 
+    
+
     const float k_GroundRadius = 0.2f;
     private bool m_OnGround = false;
     const float k_CeilingRadius = 0.2f;
@@ -49,6 +51,9 @@ public class CharacterController2D : MonoBehaviour
 
         if (OnCrouchEvent == null)
             OnCrouchEvent = new BoolEvent();
+
+
+        
     }
 
     // Update is called once per fixed framerate frame
@@ -145,6 +150,11 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = _Scale;
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //portal shenanigans and activate right/left box and disable normal head/foot collider and stuff
+    }
 
 }
 

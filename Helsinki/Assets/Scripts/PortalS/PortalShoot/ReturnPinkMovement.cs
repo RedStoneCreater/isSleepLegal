@@ -21,7 +21,7 @@ public class ReturnPinkMovement : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         target = Player.transform;
 
-        if (Vector3.Distance(transform.position, target.position) > 1f)
+        if (Vector3.Distance(transform.position, target.position) > 0.1f)
         {
             MoveTowardsTarget();
             RotateTowardsTarget();

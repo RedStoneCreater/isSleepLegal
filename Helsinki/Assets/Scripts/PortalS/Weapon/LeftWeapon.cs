@@ -25,13 +25,13 @@ public class LeftWeapon : MonoBehaviour
         target = Player.transform;
         Distance += 1;
 
-        if (Distance <= 240)
+        if (Distance <= 200)
         {
             transform.Translate(new Vector2(1, 0) * Speed * Time.deltaTime);
         }
-        if (Distance > 240)
+        if (Distance > 200)
         {
-            if (Vector3.Distance(transform.position, target.position) > 1f)
+            if (Vector3.Distance(transform.position, target.position) > 0.1f)
             {
                 Speed = 5;
                 transform.gameObject.tag = "ReturnLeft";
