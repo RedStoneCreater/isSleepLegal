@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3388649133645514188}
   - component: {fileID: 1012235730411002561}
   m_Layer: 0
-  m_Name: RedPortalHorizontal
+  m_Name: RedPortalHorizontal (1)
   m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 87ebaa242e3d7ae41ac479db731b5ba4, type: 3}
   m_Color: {r: 0.9215687, g: 0.10980393, b: 0.14509805, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ef5b6ac04dee34a96fe75d85fd2727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedPortalShoot: {fileID: 846021683756413951, guid: d56dcf5a8e17c0d4ebe7d8feb5f6667e,
+  RedPortalShoot: {fileID: 846021683756413951, guid: 1cacf152092c5f54d8c87d8caab58630,
     type: 3}
 --- !u!61 &1012235730411002561
 BoxCollider2D:

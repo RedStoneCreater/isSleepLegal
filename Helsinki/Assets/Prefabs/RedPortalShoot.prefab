@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 188754733902490421}
   m_Layer: 0
   m_Name: RedPortalShoot
-  m_TagString: Respawn
+  m_TagString: ReturnRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,13 +73,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8fffa00d6e395a546a4ca9dd1573fde8, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: c3a0fdb0a49609548ae12f815a09097b, type: 3}
   m_Color: {r: 0.9215687, g: 0.10980393, b: 0.14509805, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.21, y: 0.21}
+  m_Size: {x: 1.1, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 020232dac158e18469d7014c8961ea05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedPortal: {fileID: 1167697931557868568, guid: e1b2ffaa4ffdeff4389de9735d0ef5fd,
+  RedPortal: {fileID: 1167697931557868568, guid: 0b2d81d67ed4a314eb0bc54f1c2c99ac,
     type: 3}
-  RedPortalHorizontal: {fileID: 8509811868823156893, guid: 667177b21271f5d43a9dc380ec513389,
+  RedPortalHorizontal: {fileID: 8509811868823156893, guid: 0b838ea3d0a9a9c4a8458012657b090b,
     type: 3}
   m_Speed: 5
 --- !u!61 &846021683756413947
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846021683756413951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -120,7 +120,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.1, y: 0.6}
-    newSize: {x: 0.21, y: 0.21}
+    newSize: {x: 1.1, y: 0.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

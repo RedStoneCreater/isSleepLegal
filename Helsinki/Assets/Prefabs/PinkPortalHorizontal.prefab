@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5392890453955172619}
   - component: {fileID: 3969022218568261951}
   m_Layer: 0
-  m_Name: PinkPortalHorizontal
+  m_Name: PinkPortalHorizontal (1)
   m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 87ebaa242e3d7ae41ac479db731b5ba4, type: 3}
   m_Color: {r: 0.9607844, g: 0.4039216, b: 0.854902, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf21dcdba030754d8e9822744c93812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PinkPortalShoot: {fileID: 1262777980084751972, guid: 8a93a6f3a12a50949bb6c656cb8de1fb,
+  PinkPortalShoot: {fileID: 1262777980084751972, guid: 5f6612f4ecd276f4fb6bddfe1fc61c20,
     type: 3}
 --- !u!61 &3969022218568261951
 BoxCollider2D:
