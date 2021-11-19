@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
+    public Animator animator;
 
     float HorMove = 0f;
     public float moveSpeed = 40.0f;
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         HorMove = Input.GetAxis("Horizontal") * moveSpeed;
+
+        animator.SetFloat("Speed", Mathf.Abs(HorMove));
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
