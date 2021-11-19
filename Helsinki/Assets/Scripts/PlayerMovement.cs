@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
+            animator.SetBool("IsJumping", true);
         }
         if (Input.GetButtonDown("Jump"))
         {
@@ -40,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+    }
     private void FixedUpdate()
     {
         controller.Move(HorMove * Time.fixedDeltaTime, crouch, jump);
