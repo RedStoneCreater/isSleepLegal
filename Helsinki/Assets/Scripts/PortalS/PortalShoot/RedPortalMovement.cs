@@ -37,7 +37,7 @@ public class RedPortalMovement : MonoBehaviour
     {
         if (collider.gameObject.tag == "Floor")
         {
-            Instantiate(RedPortalHorizontal, transform.position, Quaternion.identity);
+            Instantiate(RedPortalHorizontal, gameObject.GetComponent<BoxCollider2D>().transform.position, Quaternion.identity);
             transform.gameObject.tag = "Respawn";
             GetComponent<RedPortalMovement>().enabled = false;
             GetComponent<ReturnRedMovement>().enabled = true;

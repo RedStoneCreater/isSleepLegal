@@ -24,9 +24,16 @@ public class Portal : MonoBehaviour
         {
             if(Count >= 30)
             {
+                
+                
                 Portal_Obj = GameObject.FindWithTag("Pink");
-                transform.position = new Vector2(Portal_Obj.transform.position.x, Portal_Obj.transform.position.y);
-                Count = 0;
+
+                if (Portal_Obj != null)
+                {
+                    transform.position = new Vector2(Portal_Obj.transform.position.x, Portal_Obj.transform.position.y);
+                    Count = 0;
+                }
+                
             }
             
         }
@@ -35,8 +42,12 @@ public class Portal : MonoBehaviour
             if (Count >= 30)
             {
                 Portal_Obj = GameObject.FindWithTag("Red");
-                transform.position = new Vector2(Portal_Obj.transform.position.x, Portal_Obj.transform.position.y);
-                Count = 0;
+                if (Portal_Obj != null)
+                {
+
+                    transform.position = new Vector2(Portal_Obj.transform.position.x, Portal_Obj.transform.position.y);
+                    Count = 0;
+                }
             }
         }
 

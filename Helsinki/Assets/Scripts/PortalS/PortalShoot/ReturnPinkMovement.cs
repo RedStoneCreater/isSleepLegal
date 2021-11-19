@@ -26,7 +26,7 @@ public class ReturnPinkMovement : MonoBehaviour
             MoveTowardsTarget();
             RotateTowardsTarget();
         }
-        if (Vector3.Distance(transform.position, target.position) < 1f)
+        if (Vector3.Distance(transform.position, target.position) < 0.1f)
         {
             GetComponent<BoxCollider2D>().enabled = true;
         }
@@ -39,7 +39,7 @@ public class ReturnPinkMovement : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        var offset = 90f;
+        var offset = 0f;
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
