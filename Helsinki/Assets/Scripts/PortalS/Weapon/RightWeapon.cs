@@ -6,6 +6,9 @@ public class RightWeapon : MonoBehaviour
 {
     int Distance;
     int Speed = 5;
+    Vector2 m_mousePosRed;
+    Vector2 m_PortalRedPos;
+    Vector2 m_PortalRedRotation;
 
     private GameObject Player;
     private Transform target;
@@ -16,6 +19,8 @@ public class RightWeapon : MonoBehaviour
         {
             transform.rotation = new Quaternion(0, 0, 180, 0);
         }
+        m_mousePosRed = Input.mousePosition;
+        m_PortalRedPos = Camera.main.WorldToScreenPoint(transform.position);
     }
 
     // Update is called once per frame
@@ -27,7 +32,12 @@ public class RightWeapon : MonoBehaviour
 
         if (Distance <= 200)
         {
-            transform.Translate(new Vector2(1, 0) * Speed * Time.deltaTime);
+            m_PortalRedRotation.x = m_mousePosRed.x - m_PortalRedPos.x;
+            m_PortalRedRotation.y = m_mousePosRed.y - m_PortalRedPos.y;
+
+            float angle = Mathf.Atan2(m_PortalRedRotation.y, m_PortalRedRotation.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.Translate(Vector2.right * Time.deltaTime * Speed);
         }
         if (Distance > 200)
         {
@@ -55,7 +65,7 @@ public class RightWeapon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Wall")
+        if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Enemy")
         {
             Distance = 240;
         }

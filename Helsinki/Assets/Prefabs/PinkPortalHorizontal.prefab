@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -5392890453955172619}
   - component: {fileID: 3969022218568261951}
   m_Layer: 0
-  m_Name: PinkPortalHorizontal (1)
+  m_Name: PinkPortalHorizontal
   m_TagString: Pink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

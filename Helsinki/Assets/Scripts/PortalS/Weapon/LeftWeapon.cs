@@ -6,6 +6,9 @@ public class LeftWeapon : MonoBehaviour
 {
     int Distance;
     int Speed = 5;
+    Vector2 m_mousePosPink;
+    Vector2 m_PortalPinkRotation;
+    Vector2 m_PortalPinkPos;
 
     private GameObject Player;
     private Transform target;
@@ -17,6 +20,8 @@ public class LeftWeapon : MonoBehaviour
             
             transform.rotation = new Quaternion(0,0,180,0);
         }
+            m_mousePosPink = Input.mousePosition;
+            m_PortalPinkPos = Camera.main.WorldToScreenPoint(transform.position);
     }
 
     // Update is called once per frame
@@ -29,7 +34,12 @@ public class LeftWeapon : MonoBehaviour
 
         if (Distance <= 200)
         {
-            transform.Translate(new Vector2(1, 0) * Speed * Time.deltaTime);
+            m_PortalPinkRotation.x = m_mousePosPink.x - m_PortalPinkPos.x;
+            m_PortalPinkRotation.y = m_mousePosPink.y - m_PortalPinkPos.y;
+
+            float angle = Mathf.Atan2(m_PortalPinkRotation.y, m_PortalPinkRotation.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+            transform.Translate(Vector2.right * Time.deltaTime * Speed);
         }
         if (Distance > 200)
         {
@@ -57,7 +67,7 @@ public class LeftWeapon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Wall")
+        if (collider.gameObject.tag == "Wall" || collider.gameObject.tag == "Enemy")
         {
             Distance = 240;
         }

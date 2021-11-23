@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3388649133645514188}
   - component: {fileID: 1012235730411002561}
   m_Layer: 0
-  m_Name: RedPortalHorizontal (1)
+  m_Name: RedPortalHorizontal
   m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

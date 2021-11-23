@@ -24,7 +24,13 @@ public class RedPortalMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            transform.gameObject.tag = "ReturnRed";
+            GetComponent<RedPortalMovement>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<ReturnRedMovement>().enabled = true;
+        }
 
         m_PortalRedRotation.x = m_mousePosRed.x - m_PortalRedPos.x;
         m_PortalRedRotation.y = m_mousePosRed.y - m_PortalRedPos.y;

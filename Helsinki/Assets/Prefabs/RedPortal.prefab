@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5473008297319841949}
   - component: {fileID: -3242004069868806121}
   m_Layer: 0
-  m_Name: RedPortal (1)
+  m_Name: RedPortal
   m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1167697931557868568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: a10a772c08a490444843b97e518a4b76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0624005765d25034f9bf6ce4411c872c, type: 3}
   m_Color: {r: 0.9215687, g: 0.10980393, b: 0.14509805, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,16 +110,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.039127603, y: 0.008384466}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21, y: 2.91}
+    oldSize: {x: 1.3777778, y: 1.0222223}
     newSize: {x: 0.21, y: 2.91}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21341336, y: 2.91}
+  m_Size: {x: 0.10162021, y: 0.74680257}
   m_EdgeRadius: 0

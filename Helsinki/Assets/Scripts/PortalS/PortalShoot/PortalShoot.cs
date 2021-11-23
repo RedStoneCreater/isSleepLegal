@@ -14,6 +14,11 @@ public class PortalShoot : MonoBehaviour
     [SerializeField]
     GameObject RightFirePortal;
 
+    [SerializeField]
+    GameObject RedPortalCount;
+    [SerializeField]
+    GameObject PinkPortalCount;
+
 
     public bool RedPortalOut = false;
     public bool PinkPortalOut = false;
@@ -68,7 +73,22 @@ public class PortalShoot : MonoBehaviour
                 Instantiate(RightFirePortal, transform.position, Quaternion.identity);
             }
         }
-
+        if (RedPortalOut == false)
+        {
+            RedPortalCount.GetComponent<Renderer>().enabled = true;
+        }
+        if (PinkPortalOut == false)
+        {
+            PinkPortalCount.GetComponent<Renderer>().enabled = true;
+        }
+        if (RedPortalOut == true)
+        {
+            RedPortalCount.GetComponent<Renderer>().enabled = false;
+        }
+        if (PinkPortalOut == true)
+        {
+            PinkPortalCount.GetComponent<Renderer>().enabled = false;
+        }
 
     }
     public void OnTriggerEnter2D(Collider2D collider)

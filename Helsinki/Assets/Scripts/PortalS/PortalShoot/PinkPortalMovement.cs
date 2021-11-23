@@ -25,7 +25,13 @@ public class PinkPortalMovement : MonoBehaviour
     void Update()
     {
         
-
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            transform.gameObject.tag = "ReturnPink";
+            GetComponent<PinkPortalMovement>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<ReturnPinkMovement>().enabled = true;
+        }
         m_PortalPinkRotation.x = m_mousePosPink.x - m_PortalPinkPos.x;
         m_PortalPinkRotation.y = m_mousePosPink.y - m_PortalPinkPos.y;
 
