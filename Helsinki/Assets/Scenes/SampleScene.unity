@@ -26547,6 +26547,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6114911753727901007}
+    - target: {fileID: 2387568416503576441, guid: ef5114bbed36ee04b99c17774e90dfa6,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1521833
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387568416503576441, guid: ef5114bbed36ee04b99c17774e90dfa6,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.18058121
+      objectReference: {fileID: 0}
     - target: {fileID: 2387568416857074720, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
       propertyPath: m_TagString
@@ -26554,13 +26564,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2387568417107008902, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
-      propertyPath: WalkTimer
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6114911753727901004}
     - target: {fileID: 2387568417107008902, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
-      propertyPath: m_MoveSpeed
-      value: 0.8
+      propertyPath: BulletSpeed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2387568417107008903, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
@@ -26570,12 +26580,12 @@ PrefabInstance:
     - target: {fileID: 2387568417107008903, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.22
+      value: -5.715
       objectReference: {fileID: 0}
     - target: {fileID: 2387568417107008903, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.485
+      value: -4.702
       objectReference: {fileID: 0}
     - target: {fileID: 2387568417107008903, guid: ef5114bbed36ee04b99c17774e90dfa6,
         type: 3}

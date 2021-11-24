@@ -5,10 +5,18 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float WalkTimer = 5.0f;
-
+    [SerializeField] float ShootTimer = 1.0f;
+    [SerializeField] float BulletSpeed = 1.0f;
 
     public GameObject enemy;
+    public GameObject bullet;
+    public Transform player;
+    public Transform barrelPos;
+    public float sightRange;
+    private float playerDist;
+
     private bool m_FacingRight = true;
+    private bool canShoot;
     public float m_MoveSpeed = 15.0f;
     
 
@@ -18,15 +26,31 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         Timer = WalkTimer;
+        canShoot = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        playerDist = Vector2.Distance(transform.position, player.position);
+        if(playerDist <= sightRange)
+        {
+            if (player.position.x>transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0)
+            {
+                Flip();
+            }
+            if(canShoot)
+            {
+                StartCoroutine(Shoot());
+                
+            }
+            
+        }
+
+
         Timer -= Time.deltaTime;
 
-        float x = 0f;
 
         if (Timer > 0)
         {
@@ -63,6 +87,16 @@ public class EnemyMovement : MonoBehaviour
         _Scale.x *= -1;
         transform.localScale = _Scale;
         
+    }
+
+    IEnumerator Shoot()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(ShootTimer);
+        GameObject newBullet = Instantiate(bullet, barrelPos.position, Quaternion.identity);
+
+        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(BulletSpeed * m_MoveSpeed * Time.fixedDeltaTime, 0f);
+        canShoot = true;
     }
 
 
