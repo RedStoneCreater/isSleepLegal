@@ -76,18 +76,24 @@ public class PortalShoot : MonoBehaviour
         if (RedPortalOut == false)
         {
             RedPortalCount.GetComponent<Renderer>().enabled = true;
+            RedPortalCount.GetComponent<FollowPlayer>().enabled = true;
         }
         if (PinkPortalOut == false)
         {
             PinkPortalCount.GetComponent<Renderer>().enabled = true;
+            PinkPortalCount.GetComponent<FollowPlayer>().enabled = true;
         }
         if (RedPortalOut == true)
         {
             RedPortalCount.GetComponent<Renderer>().enabled = false;
+            RedPortalCount.GetComponent<FollowPlayer>().enabled = false;
+            RedPortalCount.transform.position = new Vector2(transform.position.x - 0.24f, transform.position.y + 0.116f);
         }
         if (PinkPortalOut == true)
         {
             PinkPortalCount.GetComponent<Renderer>().enabled = false;
+            PinkPortalCount.GetComponent<FollowPlayer>().enabled = false;
+            PinkPortalCount.transform.position = new Vector2(transform.position.x + 0.199f, transform.position.y + 0.214f);
         }
 
     }
