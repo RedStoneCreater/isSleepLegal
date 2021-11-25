@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scientist: {fileID: 4227955332982360195}
-  moveSpeed: 0
+  moveSpeed: 1.5
   FacingRight: 0
 --- !u!1 &4227955333626159476
 GameObject:

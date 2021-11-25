@@ -14,8 +14,7 @@ public class KillPlayer : MonoBehaviour
         if(collision.gameObject.tag == "Player" )
         {
             
-            Destroy(collision.gameObject);
-            Instantiate(killCam, this.transform);
+            FindObjectOfType<HealthBar>().slider.value -= 15;
         }
     }
 }
