@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
+
+    [SerializeField] AudioSource JumpSound;
     public CharacterController m_Controller;
     public float m_Collider;
 
@@ -129,7 +131,7 @@ public class CharacterController2D : MonoBehaviour
             {
                 m_OnGround = false;
                 m_RigidBody2D.AddForce(new Vector2(0f, m_JumpSpeed));
-
+                JumpSound.Play();
             }
         }
         

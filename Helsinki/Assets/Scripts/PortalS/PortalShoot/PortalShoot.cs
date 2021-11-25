@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PortalShoot : MonoBehaviour
 {
-    [SerializeField]
-    GameObject RedPortalShoot;
-    [SerializeField]
-    GameObject PinkPortalShoot;
+    [SerializeField] AudioSource OnPortalShootSound;
+    [SerializeField] AudioSource OnShootSound;
+    
+    
+    [SerializeField] GameObject RedPortalShoot;
+    [SerializeField] GameObject PinkPortalShoot;
 
-    [SerializeField]
-    GameObject LeftFirePortal;
-    [SerializeField]
-    GameObject RightFirePortal;
+
+    [SerializeField] GameObject LeftFirePortal;
+    [SerializeField] GameObject RightFirePortal;
+
 
     [SerializeField]
     GameObject RedPortalCount;
@@ -41,7 +43,7 @@ public class PortalShoot : MonoBehaviour
                 RedPortalShoot.transform.gameObject.tag = "Respawn";
                 RedPortalShoot.GetComponent<BoxCollider2D>().enabled = true;
                 Instantiate(RedPortalShoot, transform.position, Quaternion.identity);
-
+                OnPortalShootSound.Play();
 
             }
         }
@@ -53,7 +55,7 @@ public class PortalShoot : MonoBehaviour
                 PinkPortalShoot.transform.gameObject.tag = "Respawn";
                 PinkPortalShoot.GetComponent<BoxCollider2D>().enabled = true;
                 Instantiate(PinkPortalShoot, transform.position, Quaternion.identity);
-
+                OnPortalShootSound.Play();
             }
         }
 
@@ -63,6 +65,7 @@ public class PortalShoot : MonoBehaviour
             {
                 RedPortalOut = true;
                 Instantiate(LeftFirePortal, transform.position, Quaternion.identity);
+                OnShootSound.Play();
             }
         }
         if (Input.GetMouseButtonDown(1))
@@ -71,6 +74,7 @@ public class PortalShoot : MonoBehaviour
             {
                 PinkPortalOut = true;
                 Instantiate(RightFirePortal, transform.position, Quaternion.identity);
+                OnShootSound.Play();
             }
         }
         if (RedPortalOut == false)
